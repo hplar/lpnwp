@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+"""
+Page 87: Looking Deeper
+Dealing with a raw HTTP protocol exchange.
+"""
+
 import sys
 import socket
 
