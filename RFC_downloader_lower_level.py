@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-Page 87: Looking Deeper
-Dealing with a raw HTTP protocol exchange.
+Chapter 1: Network programming and Python
+Page: 87
 """
 
 import sys
