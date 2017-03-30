@@ -44,4 +44,11 @@ print("[*] {}".format(cookies[0].domain))   # area for which this cookie is vali
 print("[*] {}".format(cookies[0].path))     # area for which this cookie is valid
 print("[*] {}".format(cookies[0].expires))  # unix timestamp -> use datetime module to convert
 
-# TO DO: datetime conversion
+# convert unix timestamp to datetiome
+print("[*] {}".format(datetime.datetime.fromtimestamp(cookies[0].expires)))
+
+# a common cookie flag
+print("[*] {}".format(cookies[0].get_nonstandard_attr('HttpOnly')))
+
+# another common cookie flag
+print("[*] {}".format(cookies[0].secure))
