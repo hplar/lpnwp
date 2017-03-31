@@ -15,3 +15,9 @@ print("[*] {}".format(result.netloc))
 
 # print only the path at the network location
 print("[*] {}".format(result.path))
+
+# manually add a port number (default http: 80, default https: 443)
+result = urlparse('http://www.python.nl:8080/')
+print("[*] {}".format(result))
+
+
