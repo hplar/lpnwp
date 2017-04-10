@@ -16,6 +16,7 @@ There are two main approaches to working with XML data:
 """
 
 import xml.etree.ElementTree as ET
+import xml.dom.minidom as minidom
 
 # create a xml root element called 'inventory'
 root = ET.Element('inventory')
@@ -46,3 +47,18 @@ ET.dump(root)
 root.remove(temp)
 # print string representation to screen
 ET.dump(root)
+
+# pretty printing
+print(minidom.parseString(ET.tostring(root)).toprettyxml())
+
+
+# pretty printing with minidom as a function
+def xml_pprint(element):
+    s = ET.tostring(element)
+    print(minidom.parseString(s).toprettyxml())
+
+# add an element attribute to <cheese>
+cheese.attrib['id'] = 'c01'
+
+# use the xml_pprint() function to pretty print the xml root tree
+xml_pprint(root)
