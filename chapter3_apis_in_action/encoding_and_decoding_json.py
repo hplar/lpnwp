@@ -57,8 +57,8 @@ t = ('a', 'b', 'c')
 j = json.dumps(t)
 print(json.loads(j))
 
-# json doesn't implement sets -> they need to be converted to lists
-s = set([1, 2, 3])
+# json doesn't implement sets -> they need to be converted to lists before converting to json strings
+s = {1, 2, 3}
 # wrong = json.dumps(s)  # returns a TypeError
-right = json.dumps(list(s))
-print(type(right))
+print("[*] {}".format(type(json.dumps(list(s)))))
+
